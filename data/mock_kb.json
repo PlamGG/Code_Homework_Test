@@ -1,0 +1,25 @@
+{
+  "articles": [
+    {
+      "id": "KB-101",
+      "title": "Handling Failed Upgrades & Multiple Pending Bank Charges",
+      "category": "Billing & Payments",
+      "tags": ["payment", "billing", "upgrade", "pro", "pending charge", "dispute", "refund"],
+      "content": "When payment gateway experiences authorization timeouts, card issuers may show multiple pending holds without actual settlement. These pending charges typically drop off within 3-5 business days. If a customer is charged 2+ times, Tier-2 Billing must immediately: 1. Confirm gateway settlement status in Stripe dashboard. 2. Provision emergency 7-day Pro access if user has urgent deadline. 3. Void uncaptured authorizations or process manual refunds. Never leave high-sentiment or dispute-threatened customers without human escalation."
+    },
+    {
+      "id": "KB-201",
+      "title": "Service Outage (HTTP 500) & Regional Edge Gateway Diagnostics",
+      "category": "Infrastructure & Outages",
+      "tags": ["error 500", "outage", "enterprise", "downtime", "asia", "thailand", "status page"],
+      "content": "Public status pages may lag behind real-time incidents by 15-30 minutes. If an Enterprise customer reports HTTP 500 across multiple browsers and coworkers, escalate immediately to Tier-3 / On-call SRE. Potential cause: Regional edge POP degradation (e.g., Cloudflare AP-Southeast node routing failures). SLA requires response within 15 minutes for 40+ seat enterprise accounts."
+    },
+    {
+      "id": "KB-301",
+      "title": "Dark Mode Troubleshooting and Feature Compatibility",
+      "category": "Product Features & UI",
+      "tags": ["dark mode", "appearance", "theme", "macos", "mac", "settings", "light theme"],
+      "content": "On macOS with Electron desktop app v4.2+, 'System Default' mode may fail to detect macOS Sonoma dark mode if Hardware Acceleration is disabled. Workaround: Toggle Settings > Appearance > Hardware Acceleration > Restart App. Feature Request Note: Scheduled dark mode (time-based switching) is not yet supported and should be logged as a customer feature request in Jira."
+    }
+  ]
+}
